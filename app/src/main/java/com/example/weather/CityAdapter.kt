@@ -26,7 +26,7 @@ class CityAdapter(val list: MutableList<CityItem>):RecyclerView.Adapter<CityAdap
     override fun onBindViewHolder(holder: RvView, position: Int) {
         val cityItem = list[position]
         holder.itemView.sity.text = cityItem.title
-        holder.itemView.sity.setOnClickListener{
+        holder.itemView.setOnClickListener{
                 CityBuff.citybuff = cityItem
                   var intent = Intent(holder.itemView.sity.context,CardActivity::class.java)
                   holder.itemView.sity.getContext().startActivity(intent)

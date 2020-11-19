@@ -1,6 +1,7 @@
 package com.example.weather
 
 
+import android.graphics.drawable.Drawable
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -17,12 +18,3 @@ interface PogodaAPI {
     fun pogoda(@Path("cityid") cityid: Int): Call<WeatherResponse>
 }
 
-
-//https://www.metaweather.com/api/location/2122265
-
-
-/*
-
-    https://www.metaweather.com/api/location/(woeid)/?=2122265&country=321
-
- */
