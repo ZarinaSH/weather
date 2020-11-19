@@ -15,13 +15,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class CardActivity : AppCompatActivity() {
-    private val retrofitPogoda = Retrofit.Builder()
+     val retrofitPogoda = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("https://www.metaweather.com/")
             .build()
-    private val pogodaClient = retrofitPogoda.create(PogodaAPI::class.java)
-
-
+     val pogodaClient = retrofitPogoda.create(PogodaAPI::class.java)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
